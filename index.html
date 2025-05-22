@@ -5,24 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .captcha-group {
-            margin-bottom: 16px;
-        }
-        .captcha-group label {
-            font-weight: 500;
-            margin-bottom: 4px;
-            display: block;
-        }
-    </style>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="css/end.css">
 </head>
 <body>
+    <!-- Botão do menu mobile -->
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
     </button>
+    <!-- Navegação principal -->
     <nav class="main-nav" id="mainNav">
         <ul>
             <li><a href="#about">Sobre</a></li>
@@ -108,20 +100,20 @@
         <section class="projects" id="projects">
             <h2>Projetos</h2>
             <div class="project-list">
-                <div class="project-card">
-                    <h3>Landing Page de Vendas</h3>
-                    <p>Página de vendas moderna e responsiva, com integração de formulário de contato e carrinho de compras.</p>
-                    <a href="#" target="_blank">Ver Projeto</a>
+                <div class="project-card technews-bg">
+                    <div class="project-info">
+                        <h3>Portal TechNews</h3>
+                        <p>Landing page de notícias sobre tecnologia, feita apenas com HTML e CSS. Um portal moderno e responsivo dedicado ao universo tech.</p>
+                        <a href="https://bielfantin.github.io/TechNews/portalNoticias/thenews.html" target="_blank">Ver Projeto</a>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>Portfólio Pessoal</h3>
-                    <p>Portfólio online para apresentar habilidades, projetos e formas de contato.</p>
-                    <a href="#" target="_blank">Ver Projeto</a>
+                    <h3>Em andamento</h3>
+                    <p>Projeto ainda em desenvolvimento. Em breve novidades!</p>
                 </div>
                 <div class="project-card">
-                    <h3>Bot de IA</h3>
-                    <p>Assistente virtual desenvolvido em Python, utilizando técnicas de processamento de linguagem natural.</p>
-                    <a href="#" target="_blank">Ver Projeto</a>
+                    <h3>Em andamento</h3>
+                    <p>Projeto ainda em desenvolvimento. Em breve novidades!</p>
                 </div>
             </div>
         </section>
@@ -147,21 +139,13 @@
             </p>
             <form action="mailto:gabriel.fantin5@icloud.com" method="POST" enctype="text/plain">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="Nome" required>
+                <input type="text" id="nome" name="Nome" required placeholder="Seu nome">
 
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="Email" required>
+                <input type="email" id="email" name="Email" required placeholder="seu@email.com">
 
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="Mensagem" rows="4" required></textarea>
-
-                <!-- CAPTCHA fake de marcar X -->
-                <div class="captcha-group">
-                    <label>
-                        <input type="checkbox" id="captcha-x" name="captcha-x" required>
-                        Marque o X para provar que você não é um robô
-                    </label>
-                </div>
+                <textarea id="mensagem" name="Mensagem" rows="4" required placeholder="Digite sua mensagem"></textarea>
 
                 <button type="submit">Enviar</button>
             </form>

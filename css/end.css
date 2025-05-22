@@ -1,0 +1,503 @@
+@media (max-width: 500px) {
+    .contact-form {
+        padding: 12px 2vw;
+        max-width: 98vw;
+    }
+}
+
+/* Corrige .header-icons e .tech-icon fora do @media também */
+.header-icons {
+    margin: 18px 0 0 0;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tech-icon {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
+    transition: transform 0.2s;
+}
+.tech-icon:hover {
+    transform: scale(1.15) rotate(-6deg);
+}
+
+.about,
+.skills,
+.projects,
+.contact-form {
+    will-change: opacity, transform;
+}
+
+/* Tema claro */
+body.light {
+    background: #f9fafb; /* fundo quase branco, levemente acinzentado */
+    color: #22223b;
+}
+
+body.light header,
+body.light footer {
+    background: #e3e6ef; /* tom mais escuro que #f1f3f9 */
+    color: #22223b;
+    box-shadow: 0 2px 8px rgba(34,34,59,0.04);
+}
+
+body.light header h1 {
+    color: #3a0ca3; /* roxo escuro, destaque */
+    text-shadow: none;
+}
+
+body.light header .subtitle {
+    color: #4ea8de; /* azul claro, destaque sutil */
+}
+
+body.light .about,
+body.light .skills,
+body.light .projects,
+body.light .contact-form {
+    background: #fff;
+    color: #22223b;
+    box-shadow: 0 2px 12px rgba(34,34,59,0.06);
+}
+
+/* Tema claro: borda roxa escura para contraste */
+body.light .about,
+body.light .skills,
+body.light .projects,
+body.light .contact-form {
+    border: 2.5px solid #3a0ca3;
+    box-shadow: 0 4px 24px rgba(58,12,163,0.10);
+}
+
+body.light .project-card {
+    background: #f6f6ff;
+    color: #22223b;
+    border-left: 4px solid #3a0ca3;
+}
+
+body.light .skills li {
+    background: #e0e7ff; /* azul/lilás pastel */
+    color: #3a0ca3;
+}
+
+body.light .btn-cv {
+    background: linear-gradient(90deg, #4ea8de, #3a0ca3);
+    color: #fff;
+}
+
+body.light .btn-theme {
+    background: #e0e7ff;
+    color: #3a0ca3;
+    border: 2px solid #bdbdfc;
+}
+
+body.light .btn-theme:focus, 
+body.light .btn-theme:hover {
+    background: #4ea8de;
+    color: #fff;
+    border: 2px solid #3a0ca3;
+}
+
+
+
+.contact-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3a0ca3;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.08rem;
+    transition: color 0.2s;
+    word-break: break-all;
+}
+
+.contact-links a:hover {
+    color: #4ea8de;
+    text-decoration: underline;
+}
+
+.contact-links a svg {
+    width: 40px;
+    height: 40px;
+    transition:
+        transform 0.7s cubic-bezier(.23,1.12,.67,.99),
+        filter 0.5s cubic-bezier(.23,1.12,.67,.99),
+        box-shadow 0.5s cubic-bezier(.23,1.12,.67,.99);
+    will-change: transform, filter, box-shadow;
+    filter: drop-shadow(0 2px 8px rgba(130,87,230,0.13));
+}
+
+.contact-links a:hover svg,
+.contact-links a:focus svg {
+    transform: rotateY(720deg) scale(1.35) skewY(8deg);
+    filter: drop-shadow(0 0 24px #a18fff) brightness(1.3) saturate(1.3);
+    box-shadow: 0 0 32px #a18fff88, 0 0 0 8px #fff2;
+}
+
+.contact-text {
+    vertical-align: middle;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.social-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s;
+}
+.social-icon:hover {
+    transform: scale(1.15) rotate(-6deg);
+}
+
+footer {
+    background: #22223b;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0 18px 0;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 18px;
+    margin-top: 6px;
+}
+
+.footer-icon {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 2px 8px rgba(130,87,230,0.13));
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.footer-icon:hover {
+    transform: scale(1.18) rotate(-8deg);
+    filter: drop-shadow(0 0 16px #a18fff) brightness(1.2);
+}
+
+.main-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 38px; /* aumenta a distância do nav para o restante do header */
+    background: rgba(40, 40, 60, 0.45);
+    box-shadow: 0 4px 24px 0 rgba(34,34,59,0.10);
+    border-radius: 0 0 18px 18px;
+    padding: 12px 0 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border: 1.5px solid rgba(180,180,255,0.13);
+    border-top: none;
+    backdrop-filter: blur(16px) saturate(1.3);
+    -webkit-backdrop-filter: blur(16px) saturate(1.3);
+    transition: background 0.3s, border 0.3s;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    padding: 0 24px;
+    margin: 0;
+}
+
+.main-nav a {
+    color: #e0e7ff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.12rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 7px 18px;
+    border-radius: 8px;
+    transition: 
+        color 0.22s,
+        background 0.18s,
+        box-shadow 0.18s;
+    outline: none;
+    background: transparent;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.main-nav a::after {
+    content: "";
+    display: block;
+    height: 2.5px;
+    width: 0;
+    background: linear-gradient(90deg, #4ea8de 40%, #8257e6 100%);
+    border-radius: 2px;
+    transition: width 0.32s cubic-bezier(.4,1.4,.6,1);
+    margin: 0 auto;
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 3px;
+    opacity: 0.85;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    color: #fff;
+    background: rgba(130,87,230,0.18);
+    box-shadow: 0 2px 12px #a18fff22;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus::after {
+    width: calc(100% - 36px);
+}
+
+.main-nav a:active {
+    color: #22223b;
+    background: #e0e7ff;
+    transition: none;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.inline-skills {
+    display: inline;
+    gap: 0;
+    margin-bottom: 0;
+}
+.inline-skills span {
+    display: inline;
+    background: none;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.theme-switch input[type="checkbox"] {
+    display: none;
+}
+.switch-label {
+    background: #323238;
+    border-radius: 30px;
+    width: 56px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.switch-ball {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    transition: left 0.3s, background 0.3s;
+    z-index: 2;
+}
+.switch-icons {
+    width: 100%;
+    display: flex;
+    padding: 0 7px;
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    z-index: 1;
+}
+input[type="checkbox"]:checked + .switch-label {
+    background: #eaf4ff;
+}
+input[type="checkbox"]:checked + .switch-label .switch-ball {
+    left: 30px;
+    background: #0077ff;
+}
+
+@media (max-width: 700px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #22223b;
+        z-index: 200;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    .main-nav.open {
+        display: block;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 201;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    border-radius: 8px;
+    /* Remova ou comente a linha abaixo para tirar o fundo branco: */
+    /* background: #fff; */
+    box-shadow: none; /* Remove sombra */
+    background: transparent; /* Garante fundo transparente */
+    border: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 6px auto;
+    background: #fff; /* risquinhos brancos */
+    border-radius: 2px;
+    transition: background 0.3s;
+}
+
+/* Quando o body estiver em dark mode */
+body.dark-mode .menu-toggle span {
+    background: #fff; /* cor clara para modo escuro */
+}
+
+
+/* Corrige cor no modo escuro */
+body:not(.light) .menu-toggle span {
+    background: #fff;
+}
+
+
+body.light .contact-form {
+    background: #f9fafb; /* mesmo fundo do body no modo claro */
+    border: 2.5px solid #3a0ca3;
+}
+
+body.light .contact-form input,
+body.light .contact-form textarea {
+    background: #e3e6ef; /* tom claro para inputs */
+    color: #22223b;
+    border: 1px solid #bdbdf7;
+}
+
+body.light .contact-form input::placeholder,
+body.light .contact-form textarea::placeholder {
+    color: #000000;
+}
+
+body.light .contact-form,
+body.light .contact-form label,
+body.light .contact-form h2,
+body.light .contact-form .contact-desc {
+    color: #22223b !important;
+}
+
+body.light .menu-toggle span {
+    background: #22223b !important;
+}
+
+body.light #mensagem::placeholder {
+    color: #b0b0b0;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.project-card {
+    background: #323238;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 20px;
+    flex: 1 1 250px;
+    min-width: 250px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid #8257e6;
+}
+
+.project-card .project-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card .project-info a {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-block;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #8257e6;
+    font-size: 1.15rem;
+}
+
+.project-card p {
+    color: #a8a8b3;
+    font-size: 1rem;
+}
+
+.project-card a {
+    margin-top: 12px;
+    color: #fff;
+    background: #8257e6;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+
+.project-card a:hover {
+    background: #6842c2;
+}

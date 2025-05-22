@@ -170,7 +170,7 @@ body.light .contact-form:focus-within {
 }
 
 .project-card {
-    background: var(--cinza-medio);
+    background: #323238;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     padding: 20px;
@@ -179,32 +179,36 @@ body.light .contact-form:focus-within {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    border-left: 4px solid var(--roxo);
-    transition: border 0.2s;
-    animation: fadeSlideUp 0.8s cubic-bezier(.77,0,.18,1) both;
-    opacity: 0;
+    border-left: 4px solid #8257e6;
 }
 
-.project-card:nth-child(1) { animation-delay: 0.7s; }
-.project-card:nth-child(2) { animation-delay: 0.8s; }
-.project-card:nth-child(3) { animation-delay: 0.9s; }
+.project-card .project-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card .project-info a {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-block;
+}
 
 .project-card h3 {
     margin-top: 0;
-    color: var(--roxo);
+    color: #8257e6;
     font-size: 1.15rem;
 }
 
 .project-card p {
-    color: var(--cinza-texto);
+    color: #a8a8b3;
     font-size: 1rem;
 }
 
 .project-card a {
     margin-top: 12px;
-    color: var(--branco);
-    background: var(--roxo);
+    color: #fff;
+    background: #8257e6;
     padding: 8px 16px;
     border-radius: 5px;
     text-decoration: none;
@@ -214,7 +218,7 @@ body.light .contact-form:focus-within {
 }
 
 .project-card a:hover {
-    background: var(--roxo-dark);
+    background: #6842c2;
 }
 
 .contact-form {
@@ -981,27 +985,20 @@ input[type="checkbox"]:checked + .switch-label .switch-ball {
 
 @media (max-width: 700px) {
     .main-nav {
-        display: flex !important;
-        position: static;
-        width: 100vw;
-        margin-bottom: 18px;
-        border-radius: 0;
-        background: var(--cinza-claro);
-        box-shadow: none;
-        padding: 8px 0 6px 0;
-        z-index: 100;
-        border: none;
-        backdrop-filter: none;
+        display: none;
+        position: absolute;
+        top: 60px; /* ajuste conforme seu header */
+        left: 0;
+        width: 100%;
+        background: #22223b;
+        z-index: 200;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
     }
-    .main-nav ul {
-        gap: 8px;
-        padding: 0 4vw;
-        flex-wrap: wrap;
-        justify-content: center;
+    .main-nav.open {
+        display: block;
     }
-    .main-nav a {
-        font-size: 1rem;
-        padding: 7px 10px;
+    .menu-toggle {
+        display: flex;
     }
 }
 
@@ -1035,36 +1032,8 @@ body.dark-mode .menu-toggle span {
     background: #fff; /* cor clara para modo escuro */
 }
 
-@media (max-width: 700px) {
-    .menu-toggle {
-        display: flex;
-        width: 40px;
-        height: 40px;
-        padding: 0;
-        gap: 2px; /* diminui o espaço entre as barras */
-    }
-    .menu-toggle span {
-        width: 22px;
-        height: 3px;
-        margin: 2px auto; /* diminui o espaço vertical */
-    }
-}
-
 /* Corrige cor no modo escuro */
 body:not(.light) .menu-toggle span {
     background: #fff;
 }
 
-@media (max-width: 700px) {
-    .menu-toggle {
-        display: flex;
-        width: 40px;
-        height: 40px;
-        padding: 0;
-    }
-    .menu-toggle span {
-        width: 22px;
-        height: 3px;
-        margin: 4px auto;
-    }
-}
