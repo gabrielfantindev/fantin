@@ -572,7 +572,6 @@ body.light .contact-form button[type="submit"]:hover {
     }
     .project-list {
         flex-direction: column;
-        gap: 16px;
     }
     .header-actions {
         position: static;
@@ -620,7 +619,6 @@ body.light .contact-form button[type="submit"]:hover {
     }
 }
 
-/* Corrige .header-icons e .tech-icon fora do @media também */
 .header-icons {
     margin: 18px 0 0 0;
     display: flex;
@@ -1035,5 +1033,20 @@ body.dark-mode .menu-toggle span {
 /* Corrige cor no modo escuro */
 body:not(.light) .menu-toggle span {
     background: #fff;
+}
+
+@media (max-width: 750px) {
+  .project-card {
+
+    max-width: 92vw !important;
+    min-width: 0 !important;
+  }
+
+  .project-card p {
+    margin-bottom: 0 !important;
+  }
+  .project-card:not(.technews-bg):not(.festivite-bg) {
+    display: none !important;
+  }
 }
 
